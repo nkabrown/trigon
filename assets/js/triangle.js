@@ -15,7 +15,14 @@ function buildGrid(data) {
       .selectAll('div')
       .data(data)
     .enter().append('div')
-      .attr('class', 'triangle-box');
+      .attr('class', 'triangle-box')
+      .on('click', function(d) {
+        if (d3.select('.triangle-grid').classed('expand')) {
+         d3.select('.triangle-grid').classed({'revert': true, 'expand': false});
+        } else {
+          d3.select('.triangle-grid').classed({'expand': true, 'revert': false});
+        }
+      });
 
   d3.selectAll('.triangle-box')
       .append('svg')

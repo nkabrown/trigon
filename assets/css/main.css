@@ -6,7 +6,7 @@
   width: 315px;
   height: 315px;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 200px;
 }
 
 .triangle-box {
@@ -16,4 +16,14 @@
   border: 0.5px solid #aaa;
   margin-right: 1px;
   padding: 0;
+}
+
+.expand {
+  transition: all .2s ease-in-out;
+  transform: scale(1.8);
+}
+
+.revert {
+  transition: all .2s ease-in-out;
+  transform: scale(1);
 }
